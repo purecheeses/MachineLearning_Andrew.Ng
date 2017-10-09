@@ -21,6 +21,8 @@ for iter = 1:num_iters
 
 
 
+    theta = theta - alpha * (1/m)*(X'*(X*theta-y))
+
 
 
 
