@@ -160,12 +160,12 @@ X_recovered = reshape(X_recovered, img_size(1), img_size(2), 3);
 
 % Display the original image 
 subplot(1, 2, 1);
-imagesc(A); 
+imagesc(A*255); 
 title('Original');
 
 % Display compressed image side by side
 subplot(1, 2, 2);
-imagesc(X_recovered)
+imagesc(X_recovered*255)
 title(sprintf('Compressed, with %d colors.', K));
 
 

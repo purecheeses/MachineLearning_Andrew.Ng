@@ -22,7 +22,17 @@ idx = zeros(size(X,1), 1);
 %
 
 
-
+for i = 1:length(idx)
+	powLength = sum((X(i,:) - centroids(1,:)).^2);
+	idx(i) = 1;
+	for j = 1:K
+		tmp = sum((X(i,:) - centroids(j,:)).^2);
+		if (tmp <= powLength)
+			idx(i) = j;
+			powLength = tmp;
+		end 
+	end 
+end 
 
 
 
